@@ -1,28 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <comment-list class="comments-list"></comment-list>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import CommentList from "./components/CommentList.vue";
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    CommentList,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  position: absolute;
+  left: 30%;
+  background-color: gray;
+}
+.comments-list {
+  display: flex;
+  flex-direction: column;
 }
 </style>
